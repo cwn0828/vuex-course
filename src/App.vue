@@ -6,9 +6,9 @@
     <p>{{completedTodosCount}}</p>
     <p>{{getTodosByID(3)}}</p>-->
     <!-- mutations -->
-    <button @click="decrement({amount:2})">-</button>
+    <button @click="decrementCount({amount:2})">-</button>
     <span>{{count}}</span>
-    <button @click="increment">+</button>
+    <button @click="incrementCount">+</button>
     <!-- <Count /> -->
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
     "completedTodosCount",
     "getTodosByID"
   ]),
-  method: mapMutations(["incrementCount", "decrementCount"])
+  methods: mapMutations(["incrementCount", "decrementCount"])
   // methods: {
   //   increment() {
   //     // 调用mutations 里的 incrementCount
