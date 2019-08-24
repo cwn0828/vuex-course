@@ -16,7 +16,7 @@ export default new Vuex.Store({
   },
   // 专门获取属性的对象
   getters: {
-    count: state => ++state.count,
+    count: state => state.count,
     // count(state) {
     //   return ++state.count;
     // }
@@ -40,8 +40,10 @@ export default new Vuex.Store({
     //   })(id)
     // }
   },
+  // 修改状态
   mutations: {
-
+    incrementCount: state => state.count++,
+    decrementCount: (state, payload) => state.count -= payload.amount
   },
   actions: {
 
